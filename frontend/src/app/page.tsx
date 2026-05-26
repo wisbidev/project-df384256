@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import Pipeline from "@/components/pipeline";
 import AIAgents from "@/components/ai-agents";
 import Features from "@/components/features";
+import TechStackFinalCTAFooter from "@/components/tech-stack-final-cta-footer";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Pipeline />
       <AIAgents />
       <Features />
+      <TechStackFinalCTAFooter />
     </>
   );
 }
