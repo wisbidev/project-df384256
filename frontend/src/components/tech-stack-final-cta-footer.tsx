@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ScrollReveal from "./scroll-reveal";
 
 const techItems = [
   { id: "nextjs", label: "Next.js", icon: <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#1E2938"/><text x="20" y="26" textAnchor="middle" fill="#F8FAFC" fontSize="10" fontWeight="bold" fontFamily="monospace">N</text></svg> },
@@ -18,69 +19,58 @@ export default function TechStackFinalCTAFooter() {
   return (
     <>
       {/* Tech Stack */}
-      <section id="tech-stack" className="py-20 md:py-32 bg-bg-primary">
+      <section
+        id="tech-stack"
+        className="py-20 md:py-28 lg:py-32 bg-bg-primary"
+      >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-16"
-          >
-            Stack hiện đại, sẵn sàng production
-          </motion.h2>
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-heading mb-16">
+              Stack hiện đại, sẵn sàng production
+            </h2>
+          </ScrollReveal>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-6 md:gap-10"
-          >
-            {techItems.map((item) => (
-              <div key={item.id} className="flex flex-col items-center gap-2">
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-card-bg border border-muted/20 flex items-center justify-center">
-                  {item.icon}
-                </div>
-                <span className="text-xs md:text-sm text-muted font-medium">
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </motion.div>
+          <ScrollReveal delay={0.2}>
+            <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+              {techItems.map((item) => (
+                <motion.div
+                  key={item.id}
+                  whileHover={{ scale: 1.05 }}
+                  className="flex flex-col items-center gap-2"
+                >
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-card-bg border border-muted/20 flex items-center justify-center hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-shadow duration-300">
+                    {item.icon}
+                  </div>
+                  <span className="text-xs md:text-sm text-muted font-medium">
+                    {item.label}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section id="final-cta" className="py-20 md:py-32 bg-bg-primary relative overflow-hidden">
+      <section
+        id="final-cta"
+        className="py-20 md:py-28 lg:py-32 bg-bg-primary relative overflow-hidden"
+      >
         <div className="absolute inset-0 bg-gradient-to-t from-accent/10 via-transparent to-transparent" />
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-heading leading-tight mb-6"
-          >
-            Bắt đầu build sản phẩm với AI team
-          </motion.h2>
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-heading leading-tight mb-6">
+              Bắt đầu build sản phẩm với AI team
+            </h2>
+          </ScrollReveal>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg md:text-xl text-muted max-w-xl mx-auto mb-10"
-          >
-            Chỉ cần mô tả ý tưởng, AI team sẽ tự động phân tích, build và deploy sản phẩm của bạn.
-          </motion.p>
+          <ScrollReveal delay={0.1}>
+            <p className="text-lg md:text-xl text-muted max-w-xl mx-auto mb-10">
+              Chỉ cần mô tả ý tưởng, AI team sẽ tự động phân tích, build và deploy sản phẩm của bạn.
+            </p>
+          </ScrollReveal>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <ScrollReveal delay={0.2}>
             <a
               href={telegramUrl}
               target="_blank"
@@ -104,12 +94,15 @@ export default function TechStackFinalCTAFooter() {
               </svg>
               Chat qua Telegram
             </a>
-          </motion.div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Footer */}
-      <footer id="footer" className="py-12 md:py-16 bg-bg-primary border-t border-muted/10">
+      <footer
+        id="footer"
+        className="py-12 md:py-16 bg-bg-primary border-t border-muted/10"
+      >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-center md:items-start gap-2">
