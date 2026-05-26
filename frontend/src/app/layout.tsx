@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "aiteam — AI Team tự động build phần mềm qua Telegram",
     description:
-      "Nền tảng AI tự động build phần mải mềm qua Telegram. Không cần thuê dev.",
+      "Nền tảng AI tự động build phần mềm qua Telegram. Không cần thuê dev.",
     type: "website",
   },
 };
@@ -20,16 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
-      <body className="antialiased">
-        <div className="min-h-screen flex flex-col">
-          <main className="flex-grow">
-            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {children}
-            </div>
-          </main>
-        </div>
-      </body>
+    <html lang="vi" className="scroll-smooth">
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
