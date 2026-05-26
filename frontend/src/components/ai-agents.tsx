@@ -140,6 +140,7 @@ export default function AIAgents() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
               className="bg-card-bg border border-muted/20 rounded-2xl p-6 md:p-8 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-shadow duration-300"
             >
               <div className="flex items-start gap-4 mb-6">
