@@ -51,6 +51,7 @@ export default function Pipeline() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
               className="relative flex flex-col items-center w-[calc(20%-1rem)]"
             >
               <div className="w-20 h-20 rounded-full bg-card-bg border-2 border-accent/50 flex items-center justify-center mb-6 relative z-10">
@@ -58,7 +59,7 @@ export default function Pipeline() {
                   {step.number}
                 </span>
               </div>
-              <div className="bg-card-bg border border-muted/20 rounded-xl p-4 text-center w-full">
+              <div className="bg-card-bg border border-muted/20 rounded-xl p-4 text-center w-full hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-shadow duration-300">
                 <p className="text-sm text-heading font-medium leading-relaxed">
                   {step.title}
                 </p>
@@ -76,6 +77,7 @@ export default function Pipeline() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
               className="relative flex items-start w-full max-w-sm"
             >
               <div className="flex flex-col items-center mr-4">
@@ -88,7 +90,7 @@ export default function Pipeline() {
                   <div className="w-px h-16 bg-gradient-to-b from-accent/50 to-transparent" />
                 )}
               </div>
-              <div className="bg-card-bg border border-muted/20 rounded-xl p-4 mb-8 flex-1">
+              <div className="bg-card-bg border border-muted/20 rounded-xl p-4 mb-8 flex-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-shadow duration-300">
                 <p className="text-sm text-heading font-medium leading-relaxed">
                   {step.title}
                 </p>
