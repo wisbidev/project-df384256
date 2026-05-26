@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ScrollReveal from "./scroll-reveal";
 
 const agents = [
   {
@@ -120,27 +121,26 @@ const agents = [
 
 export default function AIAgents() {
   return (
-    <section id="ai-agents" className="py-20 md:py-32 bg-bg-primary">
+    <section
+      id="ai-agents"
+      className="py-20 md:py-28 lg:py-32 bg-bg-primary"
+    >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-heading text-center mb-16"
-        >
-          4 AI Agents vận hành như engineering team thật
-        </motion.h2>
+        <ScrollReveal>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-heading text-center mb-16">
+            4 AI Agents vận hành như engineering team thật
+          </h2>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {agents.map((agent, index) => (
             <motion.div
               key={agent.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-30px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.05 }}
               className="bg-card-bg border border-muted/20 rounded-2xl p-6 md:p-8 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-shadow duration-300"
             >
               <div className="flex items-start gap-4 mb-6">
