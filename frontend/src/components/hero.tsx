@@ -16,33 +16,29 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Base dark background */}
       <div className="absolute inset-0 bg-bg-primary" />
-      
-      {/* Animated gradient background */}
+
+      {/* Animated gradient background — slow shift */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
         className="absolute inset-0"
-      >
-        <motion.div
-          animate={{
-            background: [
-              "radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)",
-              "radial-gradient(ellipse at 80% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)",
-              "radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%)",
-              "radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)",
-            ],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute inset-0"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent" />
-      </motion.div>
+        animate={{
+          background: [
+            "radial-gradient(ellipse 80% 60% at 15% 40%, rgba(59,130,246,0.20) 0%, transparent 60%)",
+            "radial-gradient(ellipse 80% 60% at 85% 60%, rgba(59,130,246,0.18) 0%, transparent 60%)",
+            "radial-gradient(ellipse 80% 60% at 50% 80%, rgba(59,130,246,0.15) 0%, transparent 60%)",
+            "radial-gradient(ellipse 80% 60% at 15% 40%, rgba(59,130,246,0.20) 0%, transparent 60%)",
+          ],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      {/* Static gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-heading leading-tight mb-6">
